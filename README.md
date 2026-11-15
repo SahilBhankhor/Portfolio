@@ -20,6 +20,6 @@ npm run build
 npm run preview
 ```
 ## Deployed to githubPages (slower😢)
-- https://sahilbhankhor.github.io/Portfolio/
+- https://sahilbhankhor.github.io/Portfolio/ {:target="_blank"}
 ## Deployed to Vercel
-- https://portfolio-omega-beryl-58.vercel.app/
+- https://portfolio-omega-beryl-58.vercel.app/ {:target="_blank"}
