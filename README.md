@@ -19,7 +19,6 @@ npm run dev
 npm run build
 npm run preview
 ```
-## Deployed to githubPages (slower😢)
-- https://sahilbhankhor.github.io/Portfolio/
-## Deployed to Vercel
-- https://portfolio-omega-beryl-58.vercel.app/
+[Deployed to githubPages(slower😳) ↗](https://sahilbhankhor.github.io/Portfolio)
+
+[Deployed to Vercel ↗](https://portfolio-omega-beryl-58.vercel.app)
