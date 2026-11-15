@@ -1,18 +1,17 @@
 import { useState } from 'react';
 import helmetImg from '../assets/helmet.webp';
 import { PROFILE, PROJECTS, SKILLS } from '../data/portfolio';
+import { copyText } from '../utils/copyText';
 import { ArrowDownIcon, ArrowUpRightIcon, CheckIcon, CopyIcon } from './Icons';
 
 export default function Hero() {
   const [copied, setCopied] = useState(false);
 
   const copyEmail = async () => {
-    try {
-      await navigator.clipboard.writeText(PROFILE.email);
+    const ok = await copyText(PROFILE.email);
+    if (ok) {
       setCopied(true);
       setTimeout(() => setCopied(false), 2200);
-    } catch {
-      window.location.href = `mailto:${PROFILE.email}`;
     }
   };
 
