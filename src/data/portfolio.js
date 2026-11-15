@@ -181,6 +181,18 @@ export const PROJECTS = [
     tags: ['Python', 'CLI', 'Automation'],
     url: 'https://github.com/SahilBhankhor/codealpha_ChatBot',
   },
+  {
+    id: 's-shell',
+    index: '05', // omit this line if you add auto-numbering in Step 2
+    title: 'S_SHELL — Custom C++ Shell',
+    category: 'systems',
+    origin: 'Systems / C++',
+    typeLabel: 'GitHub Repo',
+    description:
+      'POSIX-style command-line shell built from scratch in C++, implementing built-in commands (cd, pwd, echo, type, exit), PATH executable resolution, and process execution.',
+    tags: ['C++', 'POSIX / CLI', 'CMake'],
+    url: 'https://github.com/SahilBhankhor/S_SHELL',
+  },
 ];
 
 // All 6 contact channels sourced directly from contact.html in SahilBhankhor/Portfolio

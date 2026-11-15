@@ -4,6 +4,7 @@ import { ArrowUpRightIcon } from './Icons';
 
 const PROJECT_FILTERS = [
   { id: 'all', label: 'All' },
+  { id: 'systems', label: 'C++ / Systems' },
   { id: 'web', label: 'Web / UI' },
   { id: 'python', label: 'Python CLI' },
 ];
