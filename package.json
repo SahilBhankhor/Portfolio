@@ -1,10 +1,22 @@
 {
-  "dependencies": {
-    "@tailwindcss/cli": "^4.1.18",
-    "tailwindcss": "^4.1.18"
-  },
+  "name": "sahil-bhankhor-portfolio",
+  "private": true,
+  "version": "2.0.0",
+  "type": "module",
+  "description": "Personal portfolio of Sahil Bhankhor — Computer Science Student & Web Developer. Built with React, Vite, and Tailwind CSS.",
   "scripts": {
-    "build-css": "tailwindcss -i ./cssFiles/style.css -o ./cssFiles/output.css --minify",
-    "build": "npm run build-css"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.1.18",
+    "@vitejs/plugin-react": "^4.3.4",
+    "tailwindcss": "^4.1.18",
+    "vite": "^6.2.0"
   }
 }

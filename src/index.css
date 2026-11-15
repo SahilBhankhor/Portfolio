@@ -1,0 +1,206 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Space Grotesk", ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, Consolas, "Courier New", monospace;
+
+  --color-canvas: #E4E5E9;
+  --color-surface: #F2F2F5;
+  --color-ink: #141619;
+  --color-muted: #525862;
+  --color-moss: #2D523A;
+  --color-moss-bright: #3F7352;
+  --color-moss-tint: #D5E2D9;
+}
+
+@layer base {
+  html {
+    background-color: var(--color-canvas);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    scroll-padding-top: 6rem;
+  }
+
+  body {
+    overflow-x: hidden;
+    min-height: 100vh;
+  }
+}
+
+/* ============================================================
+   MINIMALISM: Architectural Blueprint Grid & Flat Precision
+   ============================================================ */
+.bg-editorial-grid {
+  background-image:
+    linear-gradient(to right, rgba(20, 22, 25, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(20, 22, 25, 0.05) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+.minimal-well {
+  background: rgba(20, 22, 25, 0.045);
+  border: 1.5px solid rgba(20, 22, 25, 0.14);
+}
+
+.minimal-tag {
+  background: rgba(255, 255, 255, 0.56);
+  border: 1px solid rgba(20, 22, 25, 0.22);
+}
+
+/* ============================================================
+   GLASSMORPHISM: Crisp Architectural Frosted Glass Panels
+   ============================================================ */
+.glass-panel {
+  background: rgba(248, 248, 251, 0.58);
+  backdrop-filter: blur(18px) saturate(150%);
+  -webkit-backdrop-filter: blur(18px) saturate(150%);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.85),
+    0 8px 24px rgba(20, 22, 25, 0.05);
+}
+
+.glass-nav {
+  background: rgba(246, 247, 250, 0.68);
+  backdrop-filter: blur(20px) saturate(160%);
+  -webkit-backdrop-filter: blur(20px) saturate(160%);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.9),
+    3px 3px 0 #141619;
+}
+
+/* ============================================================
+   BRUTALISM + GLASSMORPHISM: Hard Frames & Mechanical Shadows
+   ============================================================ */
+.brutal-card {
+  background: #F2F2F5;
+  border: 2px solid #141619;
+  box-shadow: 6px 6px 0 #141619;
+}
+
+.brutal-glass-card {
+  background: rgba(249, 249, 252, 0.66);
+  backdrop-filter: blur(18px) saturate(150%);
+  -webkit-backdrop-filter: blur(18px) saturate(150%);
+  border: 2px solid #141619;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.92),
+    6px 6px 0 #141619;
+}
+
+.brutal-glass-interactive {
+  background: rgba(249, 249, 252, 0.66);
+  backdrop-filter: blur(16px) saturate(150%);
+  -webkit-backdrop-filter: blur(16px) saturate(150%);
+  border: 2px solid #141619;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.9),
+    5px 5px 0 #141619;
+  transition:
+    transform 150ms cubic-bezier(0.2, 0, 0, 1),
+    box-shadow 150ms cubic-bezier(0.2, 0, 0, 1),
+    background-color 160ms ease;
+}
+
+.brutal-glass-interactive:hover {
+  background: rgba(252, 252, 254, 0.78);
+  transform: translate(-2px, -2px);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.95),
+    8px 8px 0 #141619;
+}
+
+.brutal-btn {
+  border: 2px solid #141619;
+  box-shadow: 4px 4px 0 #141619;
+  transition:
+    transform 120ms cubic-bezier(0.2, 0, 0, 1),
+    box-shadow 120ms cubic-bezier(0.2, 0, 0, 1),
+    background-color 150ms ease,
+    color 150ms ease;
+}
+
+.brutal-btn:hover {
+  transform: translate(-1.5px, -1.5px);
+  box-shadow: 5.5px 5.5px 0 #141619;
+}
+
+.brutal-btn:active {
+  transform: translate(3px, 3px);
+  box-shadow: 1px 1px 0 #141619;
+}
+
+.brutal-badge {
+  border: 1.5px solid #141619;
+  box-shadow: 2.5px 2.5px 0 #141619;
+}
+
+/* ============================================================
+   SKILLS & CONTACT: Minimalist Glass -> Brutalist Snap
+   ============================================================ */
+.skill-tile {
+  background: rgba(252, 252, 254, 0.56);
+  backdrop-filter: blur(12px) saturate(140%);
+  -webkit-backdrop-filter: blur(12px) saturate(140%);
+  border: 1.5px solid rgba(20, 22, 25, 0.24);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.85);
+  transition:
+    transform 130ms cubic-bezier(0.2, 0, 0, 1),
+    box-shadow 130ms cubic-bezier(0.2, 0, 0, 1),
+    border-color 140ms ease,
+    background-color 140ms ease,
+    color 140ms ease;
+}
+
+.skill-tile:hover {
+  background: rgba(255, 255, 255, 0.82);
+  border-color: #141619;
+  transform: translate(-2px, -2px);
+  box-shadow: 4px 4px 0 #141619;
+}
+
+.skill-tile:active {
+  transform: translate(1px, 1px);
+  box-shadow: 1px 1px 0 #141619;
+}
+
+.skill-tile[data-active="true"] {
+  background: #141619;
+  border-color: #141619;
+  transform: translate(-1px, -1px);
+  box-shadow: 4px 4px 0 #2D523A;
+}
+
+.contact-tile {
+  background: rgba(250, 250, 253, 0.6);
+  backdrop-filter: blur(14px) saturate(145%);
+  -webkit-backdrop-filter: blur(14px) saturate(145%);
+  border: 1.5px solid rgba(20, 22, 25, 0.28);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.85);
+  transition:
+    transform 140ms cubic-bezier(0.2, 0, 0, 1),
+    box-shadow 140ms cubic-bezier(0.2, 0, 0, 1),
+    border-color 140ms ease,
+    background-color 140ms ease;
+}
+
+.contact-tile:hover {
+  background: rgba(255, 255, 255, 0.84);
+  border-color: #141619;
+  transform: translate(-2px, -2px);
+  box-shadow: 5px 5px 0 #141619;
+}
+
+.contact-tile:active {
+  transform: translate(2px, 2px);
+  box-shadow: 1.5px 1.5px 0 #141619;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
